@@ -1,6 +1,4 @@
 from selenium import webdriver
-import undetected_chromedriver as uc
-
 
 tabs = input("Tabs:")
 cps = input("Clicks:")
@@ -22,7 +20,7 @@ setInterval(function(){
 
 
 options = webdriver.ChromeOptions()
-#options.add_argument('headless')
+options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("--mute-audio")
 driver = webdriver.Chrome(options=options)
